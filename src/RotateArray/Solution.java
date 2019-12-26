@@ -5,9 +5,15 @@ import java.lang.System;
 public class Solution {
 
     public int[] solution(int[] A, int K) {
+        // catch empty array
+        if (A.length == 0) return A;
+
+        // rotate K times
         int[] x = A;
-        for (int j = 0; j < K; j++)
+        for (int j = 0; j < K; j++) {
             x = rotateOnce(x);
+        }
+
         return x;
     }
 
